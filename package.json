@@ -30,6 +30,7 @@
     "moment": "2.22.2",
     "node-sass": "4.9.3",
     "normalize.css": "8.0.0",
+    "numeraljs": "1.5.6",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -66,11 +67,11 @@
     "heroku-postbuild": "yarn run build -p"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.1.5",
     "enzyme": "3.5.0",
     "enzyme-to-json": "3.3.4",
     "jest": "20.0.4",
-    "react-test-renderer": "16.4.2"
+    "react-test-renderer": "16.4.2",
+    "webpack-dev-server": "^3.1.5"
   },
   "jest": {
     "collectCoverageFrom": [
