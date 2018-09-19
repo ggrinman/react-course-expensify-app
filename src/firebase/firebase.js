@@ -13,6 +13,8 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
+export {firebase, database as default};
+
 // database.ref('expenses')
 // 	.once('value')
 // 	.then((snapshot) => {
@@ -32,50 +34,50 @@ const database = firebase.database();
 // 		console.log('Error fetching data', 2);
 // 	});
 
-database.ref().on('child_removed', (snapshot) => {
-
-	const expenses = [];
-
-	snapshot.forEach((childSnapshot) => {
-		expenses.push({
-			id: childSnapshot.key,
-			...childSnapshot.val()
-		});
-	});
-
-	console.log(expenses);
-
-});
-
-database.ref().on('child_changed', (snapshot) => {
-
-	const expenses = [];
-
-	snapshot.forEach((childSnapshot) => {
-		expenses.push({
-			id: childSnapshot.key,
-			...childSnapshot.val()
-		});
-	});
-
-	console.log(expenses);
-
-});
-
-database.ref().on('child_added', (snapshot) => {
-
-	const expenses = [];
-
-	snapshot.forEach((childSnapshot) => {
-		expenses.push({
-			id: childSnapshot.key,
-			...childSnapshot.val()
-		});
-	});
-
-	console.log(expenses);
-
-});
+// database.ref().on('child_removed', (snapshot) => {
+//
+// 	const expenses = [];
+//
+// 	snapshot.forEach((childSnapshot) => {
+// 		expenses.push({
+// 			id: childSnapshot.key,
+// 			...childSnapshot.val()
+// 		});
+// 	});
+//
+// 	console.log(expenses);
+//
+// });
+//
+// database.ref().on('child_changed', (snapshot) => {
+//
+// 	const expenses = [];
+//
+// 	snapshot.forEach((childSnapshot) => {
+// 		expenses.push({
+// 			id: childSnapshot.key,
+// 			...childSnapshot.val()
+// 		});
+// 	});
+//
+// 	console.log(expenses);
+//
+// });
+//
+// database.ref().on('child_added', (snapshot) => {
+//
+// 	const expenses = [];
+//
+// 	snapshot.forEach((childSnapshot) => {
+// 		expenses.push({
+// 			id: childSnapshot.key,
+// 			...childSnapshot.val()
+// 		});
+// 	});
+//
+// 	console.log(expenses);
+//
+// });
 
 // database.ref('expenses').push({
 // 	description: 'desc 1',
